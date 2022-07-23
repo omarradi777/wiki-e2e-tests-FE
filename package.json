@@ -1,0 +1,22 @@
+{
+  "name": "wikipedia-e2e-tests",
+  "version": "1.0.0",
+  "description": "Wikipedia E2E Tests using Cypress JS",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarradi777/wiki-e2e-tests-FE.git"
+  },
+  "author": "Omar Radi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omarradi777/wiki-e2e-tests-FE/issues"
+  },
+  "homepage": "https://github.com/omarradi777/wiki-e2e-tests-FE#readme",
+  "dependencies": {
+    "cypress": "^9.7.0"
+  }
+}
