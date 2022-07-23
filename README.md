@@ -12,7 +12,7 @@ Wikipedia E2E Tests using Cypress
 
 ## Setup
 
-1. clone project using Github "https://github.com/swvl/taas-dashboard-automation-BDD"
+1. clone project using Github "https://github.com/omarradi777/wiki-e2e-tests-FE"
 
 2. CD to your project directory in terminal
 
