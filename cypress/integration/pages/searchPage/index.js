@@ -21,6 +21,9 @@ export default class SearchPage {
   }
 
   searchForArticle(articleName) {
+    let expectedURL = `https://en.wikipedia.org/wiki/${replaceSpaceWithUnderscore(
+      articleName
+    )}`
     this._interceptArticleSearchResponse(articleName)
     cy.get(elements.SERACH_FIELD).type(articleName)
     cy.wait('@searchCriteria')
@@ -31,13 +34,9 @@ export default class SearchPage {
           .children()
           .eq(0)
           .should('contain', articleName)
-          .should(
-            'have.attr',
-            'href',
-            `https://en.wikipedia.org/wiki/${replaceSpaceWithUnderscore(
-              articleName
-            )}`
-          )
+          .should('have.attr', 'href', expectedURL)
+          .click()
+        cy.url().should('include', expectedURL)
       })
   }
 
