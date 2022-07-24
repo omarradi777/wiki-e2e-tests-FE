@@ -1,4 +1,4 @@
-import SearchPage from '../../pages/searchPage'
+import SearchPage from '../pages/search.page'
 
 const searchPage = new SearchPage()
 
