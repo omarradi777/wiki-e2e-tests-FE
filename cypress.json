@@ -2,5 +2,5 @@
   "baseUrl": "https://www.wikipedia.org/",
   "apiBaseUrl": "https://en.wikipedia.org/w/api.php",
   "ignoreTestFiles": ["**/pages/*/*.js", "**/utilities/*.js"],
-  "screenshotOnRunFailure": true
+  "screenshotOnRunFailure": false
 }
