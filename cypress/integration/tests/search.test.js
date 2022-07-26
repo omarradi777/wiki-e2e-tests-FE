@@ -7,10 +7,10 @@ describe('Wikipedia Test Serach Scenarios', () => {
     searchPage.visit()
   })
   it('Search for an article (Apollo 11)', () => {
-    searchPage.searchForArticle('Apollo 11')
+    searchPage.searchForArticle()
   })
 
   it('Search for an invalid article', () => {
-    searchPage.searchForInvalidArticle('ASDADFASDASDAS')
+    searchPage.searchForInvalidArticle()
   })
 })

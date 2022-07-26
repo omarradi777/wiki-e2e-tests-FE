@@ -3,6 +3,7 @@ const {
 } = require('../../utilities/helperFunctions')
 
 const elements = require('./elements')
+const data = require('./data')
 
 export default class SearchPage {
   visit() {
@@ -20,7 +21,7 @@ export default class SearchPage {
     }).as('searchCriteria')
   }
 
-  searchForArticle(articleName) {
+  searchForArticle(articleName = data.VALID_ARTICLE) {
     let expectedURL = `https://en.wikipedia.org/wiki/${replaceSpaceWithUnderscore(
       articleName
     )}`
@@ -40,7 +41,7 @@ export default class SearchPage {
       })
   }
 
-  searchForInvalidArticle(articleName) {
+  searchForInvalidArticle(articleName = data.INVALID_ARTICLE) {
     this._interceptArticleSearchResponse(articleName)
     cy.get(elements.SERACH_FIELD).type(articleName)
     cy.wait('@searchCriteria')
